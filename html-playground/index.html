@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testing the web component</title>
+  <script>
+    const source = 'https://raw.githubusercontent.com/azangru/throwaway-reg-component/main/dist/assets/index-BBxcMSgd.js';
+    fetch(source).then((response) => {
+      return response.text()
+    }).then((response) => {
+      eval(response);
+    }).catch((error) => {
+      console.error(`An error occured while attempting to load the "${source}" resource!`);
+      console.error(error);
+    });
+  </script>
+</head>
+<body>
+  <h1>
+    This is just a test
+  </h1>
+
+  <ens-regulation></ens-regulation>
+</body>
+</html>
